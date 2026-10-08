@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Certidões CNPJ</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sistema">
+
+        <!-- MENU LATERAL -->
+
+        <aside class="menu">
+
+            <div class="logo">
+                Certidões CNPJ
+            </div>
+
+            <nav>
+
+                <button onclick="mostrarPainel()">
+                    Painel
+                </button>
+
+                <button onclick="mostrarEmpresas()">
+                    Empresas
+                </button>
+
+                <button onclick="mostrarCertidoes()">
+                    Certidões
+                </button>
+
+                <button onclick="mostrarConfiguracoes()">
+                    Configurações
+                </button>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+
+        <main class="conteudo">
+
+            <div class="container">
+
+                <h1>Certidões CNPJ</h1>
+
+                <p>Painel de controle</p>
+
+
+                <!-- CARDS -->
+
+                <div class="painel-cards">
+
+                    <div class="painel-card">
+
+                        <span>Empresas cadastradas</span>
+
+                        <strong id="totalEmpresas">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="painel-card">
+
+                        <span>Certidões</span>
+
+                        <strong id="totalCertidoes">
+                            5
+                        </strong>
+
+                    </div>
+
+
+                    <div class="painel-card">
+
+                        <span>Consultas realizadas</span>
+
+                        <strong id="totalConsultas">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <hr>
+
+
+                <!-- CADASTRO -->
+
+                <h2>Cadastrar empresa</h2>
+
+                <label for="nomeEmpresa">
+                    Nome da empresa
+                </label>
+
+                <input
+                    type="text"
+                    id="nomeEmpresa"
+                    placeholder="Digite o nome da empresa"
+                >
+
+
+                <label for="cnpj">
+                    CNPJ
+                </label>
+
+                <input
+                    type="text"
+                    id="cnpj"
+                    placeholder="00.000.000/0000-00"
+                >
+
+
+                <button onclick="cadastrarEmpresa()">
+                    Cadastrar Empresa
+                </button>
+
+
+                <hr>
+
+
+                <!-- PESQUISA -->
+
+                <h2>Pesquisar empresa</h2>
+
+                <input
+                    type="text"
+                    id="pesquisa"
+                    placeholder="Digite o nome da empresa"
+                >
+
+
+                <button onclick="pesquisarEmpresa()">
+                    Pesquisar
+                </button>
+
+
+                <div id="resultado"></div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
